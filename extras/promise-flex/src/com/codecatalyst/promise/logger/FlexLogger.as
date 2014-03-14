@@ -22,35 +22,35 @@
 
 package com.codecatalyst.promise.logger
 {
-	import mx.logging.Log;
+import mx.logging.Log;
 
-	/**
-	 * FlexLogger is a custom logger function that logs messages via Flex's mx.logging.Log.
-	 * 
-	 * To register this logger:
-	 * <code>Promise.registerLogger(FlexLogger.log)</code>
-	 *
-	 * To unregister this logger:
-	 * <code>Promise.unregisterLogger(FlexLogger.log)</code>
-	 */
-	public class FlexLogger
-	{
-		// ========================================
-		// Public static methods
-		// ========================================
-		
-		/**
-		 * Logs a message with the specified category, log level and 
-		 * optional parameters.
-		 * 
-		 * @param category Category
-		 * @param level Log level
-		 * @param message Message
-		 * @param parameters Optional message parameters
-		 */
-		public static function log( category:String, level:int, message:String, ...parameters ):void
-		{
-			Log.getLogger( category ).log( level, message, parameters );
-		}
-	}
+/**
+ * FlexLogger is a custom logger function that logs messages via Flex's mx.logging.Log.
+ *
+ * To register this logger:
+ * <code>Promise.registerLogger(FlexLogger.log)</code>
+ *
+ * To unregister this logger:
+ * <code>Promise.unregisterLogger(FlexLogger.log)</code>
+ */
+public class FlexLogger
+{
+    // ========================================
+    // Public static methods
+    // ========================================
+
+    /**
+     * Logs a message with the specified category, log level and
+     * optional parameters.
+     *
+     * @param category Category
+     * @param level Log level
+     * @param message Message
+     * @param parameters Optional message parameters
+     */
+    public static function log( category:String, level:int, message:String, ...parameters ):void
+    {
+        Log.getLogger( category ).log( level, message, parameters );
+    }
+}
 }
